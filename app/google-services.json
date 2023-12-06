@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "826432212871",
+    "project_id": "exam-63f62",
+    "storage_bucket": "exam-63f62.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826432212871:android:d32c4e51fe81b81ee44d22",
+        "android_client_info": {
+          "package_name": "com.example.exam_portal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZKTotNBGwlhYS0y5E_7Ji1klBrmtDdeI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -53,7 +53,7 @@
             android:inputType="textPassword" />
 
         <EditText
-            android:id="@+id/ConfirmPassword"
+            android:id="@+id/etConfirmPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
