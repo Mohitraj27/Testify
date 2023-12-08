@@ -1,10 +1,11 @@
-package com.example.exam_portal
+package com.example.exam_portal.activites
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
+import com.example.exam_portal.R
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginIntro : AppCompatActivity() {
@@ -12,7 +13,7 @@ class LoginIntro : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_intro)
 
-      val auth= FirebaseAuth.getInstance()
+      val auth = FirebaseAuth.getInstance()
         if(auth.currentUser!=null){
             Toast.makeText(this,"User is already logged in!",Toast.LENGTH_SHORT).show()
             redirect("MAIN")
@@ -24,8 +25,8 @@ class LoginIntro : AppCompatActivity() {
     }
     private fun redirect(name:String){
         val intent =when(name){
-            "LOGIN " -> Intent(this,LoginActivity::class.java)
-            "MAIN" -> Intent(this,MainActivity::class.java)
+            "LOGIN" -> Intent(this, LoginActivity::class.java)
+            "MAIN" -> Intent(this, MainActivity::class.java)
             else -> throw Exception("no path exists")
         }
      startActivity(intent)

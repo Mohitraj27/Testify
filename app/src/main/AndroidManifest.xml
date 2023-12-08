@@ -14,17 +14,17 @@
         android:theme="@style/Theme.Exam_portal"
         tools:targetApi="31">
         <activity
-            android:name=".LoginActivity"
+            android:name=".activites.LoginActivity"
             android:exported="true" >
 
         </activity>
         <activity
-            android:name=".SignupActivity"
+            android:name=".activites.SignupActivity"
             android:exported="true" >
 
         </activity>
         <activity
-            android:name=".LoginIntro"
+            android:name=".activites.LoginIntro"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,7 +33,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activites.MainActivity"
             android:exported="true">
 
         </activity>
