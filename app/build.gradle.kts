@@ -8,6 +8,7 @@ android {
     namespace = "com.example.exam_portal"
     compileSdk = 34
 
+
     defaultConfig {
         applicationId = "com.example.exam_portal"
         minSdk = 24
@@ -16,7 +17,9 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
     }
+
 
     buildTypes {
         release {

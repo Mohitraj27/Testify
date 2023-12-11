@@ -1,11 +1,11 @@
 package com.example.exam_portal.adapters
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.exam_portal.R
 import com.example.exam_portal.models.Question
@@ -18,6 +18,7 @@ class OptionAdapter(val context:Context, val question: Question):
         var optionView=itemView.findViewById<TextView>(R.id.quiz_option)
     }
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OptionViewHolder {
       val view = LayoutInflater.from(context).inflate(R.layout.option_item,parent,false)
         return OptionViewHolder(view)
@@ -27,6 +28,7 @@ class OptionAdapter(val context:Context, val question: Question):
        return options.size
     }
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onBindViewHolder(holder: OptionViewHolder, position: Int) {
 
         holder.optionView.text=options[position]

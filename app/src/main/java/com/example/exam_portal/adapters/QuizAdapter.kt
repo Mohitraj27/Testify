@@ -1,7 +1,8 @@
 package com.example.exam_portal.adapters
 
+import android.annotation.SuppressLint
 import android.content.Context
-import android.content.res.ColorStateList
+import android.content.Intent
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
@@ -12,11 +13,13 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.exam_portal.R
+import com.example.exam_portal.activites.QuestionActivity
 import com.example.exam_portal.models.Quiz
 import com.example.exam_portal.utils.ColorPicker
 import com.example.exam_portal.utils.IconPicker
 
-class QuizAdapter(val context: Context, val quizzes:List<Quiz>):RecyclerView.Adapter<QuizAdapter.QuizViewHolder>(){
+class QuizAdapter(val context: Context, val quizzes:List<Quiz>):
+    RecyclerView.Adapter<QuizAdapter.QuizViewHolder>(){
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): QuizViewHolder {
@@ -28,13 +31,17 @@ class QuizAdapter(val context: Context, val quizzes:List<Quiz>):RecyclerView.Ada
    return  quizzes.size
     }
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onBindViewHolder(holder: QuizViewHolder, position: Int) {
-       holder.textViewTitle.text=quizzes[position].title
+       holder.textViewTitle.text = quizzes[position].title
         holder.cardContainer.setCardBackgroundColor(Color.parseColor(ColorPicker.getColor()))
        holder.iconView.setImageResource(IconPicker.getIcon())
 
         holder.itemView.setOnClickListener{
             Toast.makeText(context,quizzes[position].title,Toast.LENGTH_SHORT).show()
+         val intent = Intent(context,QuestionActivity::class.java)
+            intent.putExtra("DATE",quizzes[position].title)
+            context.startActivity(intent)
         }
     }
     inner class QuizViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
